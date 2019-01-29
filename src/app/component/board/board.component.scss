@@ -1,0 +1,31 @@
+.board-outer-wrapper{
+    width:156px;
+    margin:0 auto;
+    text-align: center;
+}
+.board-text{
+    padding: 5px;
+}
+.board-row{
+    height: 50px;
+}
+.board-field{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.fieldX,.fieldO{
+    float: left;
+    padding: 8px 0 0 14px;
+    font-size: 30px;
+}
+.fieldX{
+    color: red;
+}
+
+.fieldO{
+    color: green;
+}

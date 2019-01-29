@@ -1,0 +1,16 @@
+<div class="board-outer-wrapper">
+  
+  <div class="board-text">Current Player : {{currentPlayer}}</div>
+  
+  <div class="board-row" *ngFor="let row of rowCount" id="row_{{row}}">
+    <div class="board-field" *ngFor="let field of fieldCount" id="{{row}}_{{field}}" (click)="addPosition(row+'_'+field)">
+      <div class="fieldX" *ngIf="arrX.indexOf(row+'_'+field) > -1" >X</div>
+      <div class="fieldO" *ngIf="arrO.indexOf(row+'_'+field) > -1" >O</div>
+    </div>
+  </div>
+
+  <div class="board-text">{{winnerMsg}}</div>
+  <div *ngIf="winnerMsg != ''">
+    <div (click)="restart()">Restart Game</div>
+  </div>
+</div>
